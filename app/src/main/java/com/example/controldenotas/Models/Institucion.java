@@ -5,17 +5,17 @@ public class Institucion {
     private String nombre;
     private String codigo;
     private String telefono;
-    private Materia materia;
+    private Docente docente;
 
     public Institucion() {
     }
 
-    public Institucion(int idInstitucion, String nombre, String codigo, String telefono, Materia materia) {
+    public Institucion(int idInstitucion, String nombre, String codigo, String telefono, Docente docente) {
         this.idInstitucion = idInstitucion;
         this.nombre = nombre;
         this.codigo = codigo;
         this.telefono = telefono;
-        this.materia = materia;
+        this.docente = docente;
     }
 
     public int getIdInstitucion() {
@@ -50,11 +50,11 @@ public class Institucion {
         this.telefono = telefono;
     }
 
-    public Materia getMateria() {
-        return materia;
+    public Docente getDocente() {
+        return docente;
     }
 
-    public void setMateria(Materia materia) {
-        this.materia = materia;
+    public void setDocente(Docente docente) {
+        this.docente = docente;
     }
 }

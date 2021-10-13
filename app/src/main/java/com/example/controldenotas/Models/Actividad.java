@@ -2,15 +2,15 @@ package com.example.controldenotas.Models;
 
 public class Actividad {
     private int idActividad;
-    private  String nombre;
+    private String nombre;
     private String descripcion;
-    private  String porcentaje;
-    private  double nota;
+    private double porcentaje;
+    private double nota;
 
     public Actividad() {
     }
 
-    public Actividad(int idActividad, String nombre, String descripcion, String porcentaje, double nota) {
+    public Actividad(int idActividad, String nombre, String descripcion, double porcentaje, double nota) {
         this.idActividad = idActividad;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -42,11 +42,11 @@ public class Actividad {
         this.descripcion = descripcion;
     }
 
-    public String getPorcentaje() {
+    public double getPorcentaje() {
         return porcentaje;
     }
 
-    public void setPorcentaje(String porcentaje) {
+    public void setPorcentaje(double porcentaje) {
         this.porcentaje = porcentaje;
     }
 
