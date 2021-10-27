@@ -15,7 +15,7 @@ import androidx.appcompat.widget.Toolbar;
 
 import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //VARIABLES
     DrawerLayout drawerLayout;
@@ -37,9 +37,12 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         /*-------------------NAVIGATION DRAWE MENU-------------------------*/
+        navigationView.bringToFront();
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawerLayout,toolbar, R.string.navigation_drawer_close, R.string.navigation_drawer_open);drawerLayout.addDrawerListener(toggle);
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
+
+        navigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override
@@ -53,4 +56,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
+    }
 }

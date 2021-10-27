@@ -32,7 +32,6 @@
             android:icon="@drawable/logout"
             android:title="Cerrar Session"
             app:showAsAction="never"/>
-
     </group>
 
 </menu>
