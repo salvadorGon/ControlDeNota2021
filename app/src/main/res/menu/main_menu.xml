@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/action_perfil"
+            android:icon="@drawable/usuario"
+            android:title="Perfil"/>
+        <item
+            android:id="@+id/action_notas"
+            android:icon="@drawable/exam"
+            android:title="Notas"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_materias"
+            android:icon="@drawable/book"
+            android:title="Materias"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_ins"
+            android:icon="@drawable/inscripcion"
+            android:title="Inscripcion"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_confi"
+            android:icon="@drawable/settings"
+            android:title="Configuracion"
+            app:showAsAction="never"/>
+        <item
+            android:id="@+id/action_cerrar"
+            android:icon="@drawable/logout"
+            android:title="Cerrar Session"
+            app:showAsAction="never"/>
+
+    </group>
+
+</menu>
