@@ -1,16 +1,21 @@
 package com.example.controldenotas.Models;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "Institucion")
 public class Institucion {
+    @PrimaryKey(autoGenerate = true)
     private int idInstitucion;
+
     private String nombre;
     private String codigo;
     private String telefono;
-    private Docente docente;
+    private int docente;
 
     public Institucion() {
     }
 
-    public Institucion(int idInstitucion, String nombre, String codigo, String telefono, Docente docente) {
+    public Institucion(int idInstitucion, String nombre, String codigo, String telefono, int docente) {
         this.idInstitucion = idInstitucion;
         this.nombre = nombre;
         this.codigo = codigo;
@@ -50,11 +55,11 @@ public class Institucion {
         this.telefono = telefono;
     }
 
-    public Docente getDocente() {
+    public int getDocente() {
         return docente;
     }
 
-    public void setDocente(Docente docente) {
+    public void setDocente(int docente) {
         this.docente = docente;
     }
 }

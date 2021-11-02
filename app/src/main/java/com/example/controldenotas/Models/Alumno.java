@@ -1,7 +1,13 @@
 package com.example.controldenotas.Models;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "Alumno")
 public class Alumno {
+    @PrimaryKey(autoGenerate = true)
     private int idAlumno;
+
     private String primerNombre;
     private String segundoNombre;
     private String primerApellido;

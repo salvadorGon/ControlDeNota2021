@@ -1,15 +1,20 @@
 package com.example.controldenotas.Models;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
+@Entity(tableName = "Notas")
 public class Notas {
+    @PrimaryKey(autoGenerate = true)
     private int idNota;
+
     private double nota;
-    private Alumno alumno;
-    private Materia materia;
+    private int alumno;
+    private int materia;
 
     public Notas() {
     }
 
-    public Notas(int idNota, double nota, Alumno alumno, Materia materia) {
+    public Notas(int idNota, double nota, int alumno, int materia) {
         this.idNota = idNota;
         this.nota = nota;
         this.alumno = alumno;
@@ -32,19 +37,19 @@ public class Notas {
         this.nota = nota;
     }
 
-    public Alumno getAlumno() {
+    public int getAlumno() {
         return alumno;
     }
 
-    public void setAlumno(Alumno alumno) {
+    public void setAlumno(int alumno) {
         this.alumno = alumno;
     }
 
-    public Materia getMateria() {
+    public int getMateria() {
         return materia;
     }
 
-    public void setMateria(Materia materia) {
+    public void setMateria(int materia) {
         this.materia = materia;
     }
 }
