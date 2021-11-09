@@ -1,23 +1,23 @@
-package com.example.controldenotas.Dao;
+package com.example.controldenotas.DaoImp;
 
 import android.content.Context;
 
 import androidx.room.Room;
 
-import com.example.controldenotas.Data.DataBaseRoomAlumno;
+import com.example.controldenotas.Dao.AlumnoDao;
+import com.example.controldenotas.Data.DataBaseRoom;
 import com.example.controldenotas.Models.Alumno;
 
 import java.util.List;
 
-public class AlumnoDaoImpRoom implements AlumnoDao{
-    DataBaseRoomAlumno db;
+public class AlumnoDaoImpRoom implements AlumnoDao {
 
+    DataBaseRoom db;
     AlumnoDao dao;
 
     public AlumnoDaoImpRoom(Context context){
-        db= Room.databaseBuilder(context, DataBaseRoomAlumno.class,"db")
-                .allowMainThreadQueries().build();
-        dao= db.Alumnodao();
+        db = Room.databaseBuilder(context, DataBaseRoom.class, "db").allowMainThreadQueries().build();
+        dao = db.alumnoDao();
     }
 
     @Override

@@ -3,25 +3,26 @@ package com.example.controldenotas.Models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "Actividad")
-public class Actividad {
-    @PrimaryKey(autoGenerate = true)
-    private int idActividad;
+import java.io.Serializable;
 
-    private String nombre;
-    private String descripcion;
-    private double porcentaje;
-    private double nota;
+@Entity(tableName = "Actividad")
+public class Actividad implements Serializable{
+
+    @PrimaryKey(autoGenerate = true)
+    int idActividad;
+
+    String nombre;
+    String descripcion;
+    double porcentaje;
 
     public Actividad() {
     }
 
-    public Actividad(int idActividad, String nombre, String descripcion, double porcentaje, double nota) {
+    public Actividad(int idActividad, String nombre, String descripcion, double porcentaje) {
         this.idActividad = idActividad;
         this.nombre = nombre;
         this.descripcion = descripcion;
         this.porcentaje = porcentaje;
-        this.nota = nota;
     }
 
     public int getIdActividad() {
@@ -54,13 +55,5 @@ public class Actividad {
 
     public void setPorcentaje(double porcentaje) {
         this.porcentaje = porcentaje;
-    }
-
-    public double getNota() {
-        return nota;
-    }
-
-    public void setNota(double nota) {
-        this.nota = nota;
     }
 }

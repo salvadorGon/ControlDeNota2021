@@ -2,25 +2,26 @@ package com.example.controldenotas.Models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "Institucion")
-public class Institucion {
-    @PrimaryKey(autoGenerate = true)
-    private int idInstitucion;
+import java.io.Serializable;
 
-    private String nombre;
-    private String codigo;
-    private String telefono;
-    private int docente;
+@Entity(tableName = "Institucion")
+public class Institucion implements Serializable {
+
+    @PrimaryKey(autoGenerate = true)
+    int idInstitucion;
+
+    String nombre;
+    String telefono;
+    int idDocente;
 
     public Institucion() {
     }
 
-    public Institucion(int idInstitucion, String nombre, String codigo, String telefono, int docente) {
+    public Institucion(int idInstitucion, String nombre, String telefono, int docente) {
         this.idInstitucion = idInstitucion;
         this.nombre = nombre;
-        this.codigo = codigo;
         this.telefono = telefono;
-        this.docente = docente;
+        this.idDocente = docente;
     }
 
     public int getIdInstitucion() {
@@ -39,14 +40,6 @@ public class Institucion {
         this.nombre = nombre;
     }
 
-    public String getCodigo() {
-        return codigo;
-    }
-
-    public void setCodigo(String codigo) {
-        this.codigo = codigo;
-    }
-
     public String getTelefono() {
         return telefono;
     }
@@ -55,11 +48,11 @@ public class Institucion {
         this.telefono = telefono;
     }
 
-    public int getDocente() {
-        return docente;
+    public int getIdDocente() {
+        return idDocente;
     }
 
-    public void setDocente(int docente) {
-        this.docente = docente;
+    public void setIdDocente(int idDocente) {
+        this.idDocente = idDocente;
     }
 }

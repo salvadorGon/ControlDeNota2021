@@ -1,17 +1,25 @@
 package com.example.controldenotas.Models;
 
-public class InstitucionMateria {
-    private int idInstitucionMateria;
-    private Institucion institucion;
-    private Materia materia;
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
+
+@Entity(tableName = "InstitucionMateria")
+public class InstitucionMateria implements Serializable {
+
+    @PrimaryKey(autoGenerate = true)
+    int idInstitucionMateria;
+    int idInstitucion;
+    int idMateria;
 
     public InstitucionMateria() {
     }
 
-    public InstitucionMateria(int idInstitucionMateria, Institucion institucion, Materia materia) {
+    public InstitucionMateria(int idInstitucionMateria, int idInstitucion, int idMateria) {
         this.idInstitucionMateria = idInstitucionMateria;
-        this.institucion = institucion;
-        this.materia = materia;
+        this.idInstitucion = idInstitucion;
+        this.idMateria = idMateria;
     }
 
     public int getIdInstitucionMateria() {
@@ -22,19 +30,19 @@ public class InstitucionMateria {
         this.idInstitucionMateria = idInstitucionMateria;
     }
 
-    public Institucion getInstitucion() {
-        return institucion;
+    public int getIdInstitucion() {
+        return idInstitucion;
     }
 
-    public void setInstitucion(Institucion institucion) {
-        this.institucion = institucion;
+    public void setIdInstitucion(int idInstitucion) {
+        this.idInstitucion = idInstitucion;
     }
 
-    public Materia getMateria() {
-        return materia;
+    public int getIdMateria() {
+        return idMateria;
     }
 
-    public void setMateria(Materia materia) {
-        this.materia = materia;
+    public void setIdMateria(int idMateria) {
+        this.idMateria = idMateria;
     }
 }

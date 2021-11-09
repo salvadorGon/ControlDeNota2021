@@ -2,19 +2,26 @@ package com.example.controldenotas.Models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "Materia")
-public class Materia {
-    @PrimaryKey(autoGenerate = true)
-    private int idMateria;
+import java.io.Serializable;
 
-    private String nombre;
+@Entity(tableName = "Materia")
+public class Materia implements Serializable {
+
+    @PrimaryKey(autoGenerate = true)
+    int idMateria;
+
+    String nombre;
+    String seccion;
+    int año;
 
     public Materia() {
     }
 
-    public Materia(int idMateria, String nombre) {
+    public Materia(int idMateria, String nombre, String seccion, int año) {
         this.idMateria = idMateria;
         this.nombre = nombre;
+        this.seccion = seccion;
+        this.año = año;
     }
 
     public int getIdMateria() {
@@ -31,5 +38,21 @@ public class Materia {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public String getSeccion() {
+        return seccion;
+    }
+
+    public void setSeccion(String seccion) {
+        this.seccion = seccion;
+    }
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
     }
 }

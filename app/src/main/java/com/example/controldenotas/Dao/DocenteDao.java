@@ -12,10 +12,10 @@ import java.util.List;
 
 @Dao
 public interface DocenteDao {
-    @Query("select * from Docente")
+    @Query("SELECT * FROM Docente")
     public List<Docente> getAll();
 
-    @Query("select * from Docente where idDocente = :id")
+    @Query("SELECT * FROM Docente WHERE idDocente = :id")
     public Docente get(int id);
 
     @Insert

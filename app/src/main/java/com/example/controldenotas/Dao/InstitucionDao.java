@@ -6,16 +6,17 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 
+
 import com.example.controldenotas.Models.Institucion;
 
 import java.util.List;
 
 @Dao
 public interface InstitucionDao {
-    @Query("select * from Institucion")
+    @Query("SELECT * FROM Institucion")
     public List<Institucion> getAll();
 
-    @Query("select * from Institucion where idInstitucion = :id")
+    @Query("SELECT * FROM Institucion WHERE idInstitucion = :id")
     public Institucion get(int id);
 
     @Insert

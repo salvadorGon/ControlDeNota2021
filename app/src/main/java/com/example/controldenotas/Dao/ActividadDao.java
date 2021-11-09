@@ -12,10 +12,11 @@ import java.util.List;
 
 @Dao
 public interface ActividadDao {
-    @Query("select * from Actividad")
-    public List<Actividad> getAll();
 
-    @Query("select * from Actividad where idActividad = :id")
+    @Query("SELECT * FROM Actividad")
+    public List<Actividad> getAl();
+
+    @Query("SELECT * FROM Actividad WHERE idActividad = :id")
     public Actividad get(int id);
 
     @Insert

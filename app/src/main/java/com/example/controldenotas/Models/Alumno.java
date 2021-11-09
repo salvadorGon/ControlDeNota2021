@@ -3,15 +3,18 @@ package com.example.controldenotas.Models;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity(tableName = "Alumno")
-public class Alumno {
-    @PrimaryKey(autoGenerate = true)
-    private int idAlumno;
+import java.io.Serializable;
 
-    private String primerNombre;
-    private String segundoNombre;
-    private String primerApellido;
-    private String segundoApellido;
+@Entity(tableName = "Alumno")
+public class Alumno implements Serializable {
+
+    @PrimaryKey(autoGenerate = true)
+    int idAlumno;
+
+    String primerNombre;
+    String segundoNombre;
+    String primerApellido;
+    String segundoApellido;
 
     public Alumno() {
     }
