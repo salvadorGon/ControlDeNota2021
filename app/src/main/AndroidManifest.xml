@@ -13,7 +13,7 @@
             android:name=".DataView.RegistroUsuario"
             android:exported="false" />
         <activity
-            android:name=".Principal.Principal"
+            android:name=".Principal"
             android:exported="false" />
         <activity
             android:name=".Calificando"
@@ -24,6 +24,15 @@
         <activity
             android:name=".ListaNotas"
             android:exported="false" />
+        <activity
+            android:name=".CalificandoAlumno"
+            android:exported="true" />
+        <activity
+            android:name=".AgregarActividades"
+            android:exported="true" />
+        <activity
+            android:name=".ListaActividades"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true" />

@@ -14,7 +14,7 @@ import java.util.List;
 public interface ActividadDao {
 
     @Query("SELECT * FROM Actividad")
-    public List<Actividad> getAl();
+    public List<Actividad> getAll();
 
     @Query("SELECT * FROM Actividad WHERE idActividad = :id")
     public Actividad get(int id);

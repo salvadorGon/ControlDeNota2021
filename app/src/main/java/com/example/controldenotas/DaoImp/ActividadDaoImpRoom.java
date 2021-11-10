@@ -20,8 +20,8 @@ public class ActividadDaoImpRoom implements ActividadDao {
         dao = db.actividadDao();
     }
     @Override
-    public List<Actividad> getAl() {
-        return dao.getAl();
+    public List<Actividad> getAll() {
+        return dao.getAll();
     }
 
     @Override
