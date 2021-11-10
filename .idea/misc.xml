@@ -5,15 +5,23 @@
       <map>
         <entry key="..\:/Users/GERSON/AndroidStudioProjects/ControlDeNotas/app/src/main/res/layout/activity_login.xml" value="0.14010416666666667" />
         <entry key="..\:/Users/GERSON/AndroidStudioProjects/ControlDeNotas/app/src/main/res/menu/main_menu.xml" value="0.1" />
-        <entry key="..\:/Users/LENOVO/Documents/CICLO02-21/PPDM/PROYECTO/ControlDeNotas/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/LENOVO/Documents/CICLO02-21/PPDM/PROYECTO/ControlDeNotas/app/src/main/res/layout/activity_registro_usuario.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/bottom_background_light.xml" value="0.2203125" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/button_crud.xml" value="1.2392857142857143" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/button_rounded.xml" value="0.2203125" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/button_rounded_border.xml" value="0.10648148148148148" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/ic_icons8_microsoft_onenote.xml" value="0.1125" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/ic_key.xml" value="0.1125" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1125" />
-        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/drawable/white_btn_background.xml" value="0.2203125" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_buscando.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_calificando.xml" value="0.33" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_item_notas.xml" value="0.33" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_lista_notas.xml" value="0.25" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_login.xml" value="0.22" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_principal.xml" value="0.22" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/activity_registro_usuario.xml" value="0.1" />
+        <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/fragment_inicio.xml" value="0.22" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/header.xml" value="0.33" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/menu/main_menu.xml" value="0.25" />
