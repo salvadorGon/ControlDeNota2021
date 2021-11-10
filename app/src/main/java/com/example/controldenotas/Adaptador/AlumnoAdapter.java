@@ -54,7 +54,7 @@ public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.ViewHolder
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_actividad,parent,false);
+        View v= LayoutInflater.from(parent.getContext()).inflate(R.layout.item_calificandoalumno,parent,false);
         ViewHolder vh=new ViewHolder(v,context);
 
         return vh;

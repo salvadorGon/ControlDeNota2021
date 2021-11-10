@@ -10,18 +10,30 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Login extends AppCompatActivity {
 
     Button btnRegistrar;
+    Button btnAgregarActividades;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
         this.btnRegistrar = (Button) findViewById(R.id.btnIngresar);
+        this.btnAgregarActividades = (Button)  findViewById(R.id.btnRegistrarse);
+
         Intent intent = new Intent(this, Principal.class);
 
         btnRegistrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(intent);
+            }
+        });
+
+        Intent intent1 = new Intent(this, ListaActividades.class);
+
+        btnAgregarActividades.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent1);
             }
         });
 

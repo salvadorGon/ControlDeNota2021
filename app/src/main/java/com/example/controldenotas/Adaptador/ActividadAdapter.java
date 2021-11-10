@@ -89,7 +89,7 @@ public class ActividadAdapter extends RecyclerView.Adapter<ActividadAdapter.View
         holder.btnCalificar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, Login.class);
+                Intent intent = new Intent(context, CalificandoAlumno.class);
                 intent.putExtra("estado",1);
                 //intent.putExtra("actividad",actividadmodel);
                 view.getContext().startActivity(intent);

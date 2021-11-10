@@ -59,6 +59,6 @@ public class AgregarActividades extends AppCompatActivity {
         alumno.setPrimerApellido("Gutierrez");
         alumno.setSegundoApellido("Giron");
         daoalumno.save(alumno);
-
     }
+
 }
