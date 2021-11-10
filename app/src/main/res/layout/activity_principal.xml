@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="158dp"
-        android:layout_height="148dp"
+        android:layout_width="104dp"
+        android:layout_height="92dp"
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -45,19 +45,22 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="411dp"
-        android:layout_height="484dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="365dp"
+        android:layout_height="753dp"
+        android:layout_marginTop="50dp"
         android:background="@drawable/bottom_background_light"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9">
+        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintVertical_bias="0.063">
 
         <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_width="343dp"
+            android:layout_height="651dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TableRow
                 android:layout_width="match_parent"
@@ -65,20 +68,20 @@
                 android:gravity="center">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_margin="10dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagecirculo"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/cirperfil"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -87,9 +90,9 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageiconperfil"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconperfil"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -98,31 +101,32 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/perfil"
+                    <Button
+                        android:id="@+id/btnPerfil"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
                         android:text="Perfil"
-                        android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagecirculoins"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/cirescuela"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -131,54 +135,54 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageiconperfil3"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconescuela"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="@+id/imagecirculoins"
+                            app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/escuela" />
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtinstitucion"
+                    <Button
+                        android:id="@+id/btnEscuela"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Institucion"
-                        android:textAlignment="center"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text="Escuela"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagecirculomate"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/cirbook"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageView2"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/icobook"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -187,15 +191,17 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtMateriaa"
+                    <Button
+                        android:id="@+id/btnMateria"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
                         android:text="Materia"
-                        android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
+
             </TableRow>
 
             <TableRow
@@ -204,20 +210,20 @@
                 android:gravity="center">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_margin="10dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagecirculoprofe"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/cirprofe"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -226,9 +232,9 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageView6"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconprofe"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -237,31 +243,32 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtProf"
+                    <Button
+                        android:id="@+id/btnProfesor"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Profesor"
-                        android:textAlignment="center"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text="Profe"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagecirculoact"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/ciracti"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -270,9 +277,9 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageView7"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconactividad"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -281,31 +288,33 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtActi"
+                    <Button
+                        android:id="@+id/btnActividad"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
                         android:text="Actividad"
                         android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagecirculoalumn"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/cirestu"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -314,9 +323,9 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageView10"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconestu"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -325,15 +334,17 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtAlum"
+                    <Button
+                        android:id="@+id/btnAlumno"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
                         android:text="Alumno"
-                        android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
+
             </TableRow>
 
             <TableRow
@@ -342,20 +353,20 @@
                 android:gravity="center">
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
+                    android:layout_margin="10dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagcirculoexa"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/circali"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -364,9 +375,9 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageView11"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconcali"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -375,31 +386,32 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtCali"
+                    <Button
+                        android:id="@+id/btnCalificar1"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
                         android:text="Calificar"
-                        android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imagecirculoconfi"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/circonfi"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -408,9 +420,9 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageView12"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconconfi"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -419,31 +431,32 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtConfi"
+                    <Button
+                        android:id="@+id/btnConfiguracion"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="Configuracion"
-                        android:textAlignment="center"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
+                        android:text="Confi"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
 
                 <LinearLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="90dp"
                     android:layout_height="wrap_content"
                     android:layout_margin="16dp"
                     android:orientation="vertical">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="83dp"
                         android:background="@drawable/white_btn_background">
 
                         <ImageView
-                            android:id="@+id/imageView8"
-                            android:layout_width="97dp"
-                            android:layout_height="87dp"
+                            android:id="@+id/circerrar"
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
                             android:layout_margin="8dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
@@ -452,9 +465,9 @@
                             app:srcCompat="@drawable/circulo" />
 
                         <ImageView
-                            android:id="@+id/imageView13"
-                            android:layout_width="65dp"
-                            android:layout_height="60dp"
+                            android:id="@+id/iconcerrar"
+                            android:layout_width="53dp"
+                            android:layout_height="52dp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
                             app:layout_constraintStart_toStartOf="parent"
@@ -463,15 +476,17 @@
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    <TextView
-                        android:id="@+id/txtCerrar"
+                    <Button
+                        android:id="@+id/btnCerrar"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="35dp"
+                        android:background="#00FFFFFF"
+                        android:fontFamily="sans-serif"
                         android:text="Cerrar"
-                        android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="18sp" />
+                        android:textSize="11dp" />
                 </LinearLayout>
+
             </TableRow>
 
         </TableLayout>
