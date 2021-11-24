@@ -1,6 +1,7 @@
 package com.example.controldenotas;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.accessibility.AccessibilityViewCommand;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ public class Principal extends AppCompatActivity {
     Button btnAlumnoPerfil;
     Button btnActividad;
     Button btnCali;
+    Button btnCerrarSesion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,17 @@ public class Principal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentCal);
+            }
+        });
+
+        this.btnCerrarSesion = (Button) findViewById(R.id.btnCerrar);
+
+        Intent intentCerrar = new Intent(this, Login.class);
+
+        btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentCerrar);
             }
         });
 
