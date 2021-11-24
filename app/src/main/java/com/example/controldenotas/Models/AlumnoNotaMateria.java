@@ -12,17 +12,15 @@ public class AlumnoNotaMateria implements Serializable {
     int idAlumnoNotaMateria;
 
     public int idAlumno;
-    int idNota;
-    int idMateria;
+    int idActividad;
 
     public AlumnoNotaMateria() {
     }
 
-    public AlumnoNotaMateria(int idAlumnoNotaMateria, int idAlumno, int idNota, int idMateria) {
+    public AlumnoNotaMateria(int idAlumnoNotaMateria, int idAlumno, int idActividad) {
         this.idAlumnoNotaMateria = idAlumnoNotaMateria;
         this.idAlumno = idAlumno;
-        this.idNota = idNota;
-        this.idMateria = idMateria;
+        this.idActividad = idActividad;
     }
 
     public int getIdAlumnoNotaMateria() {
@@ -41,19 +39,11 @@ public class AlumnoNotaMateria implements Serializable {
         this.idAlumno = idAlumno;
     }
 
-    public int getIdNota() {
-        return idNota;
+    public int getIdActividad() {
+        return idActividad;
     }
 
-    public void setIdNota(int idNota) {
-        this.idNota = idNota;
-    }
-
-    public int getIdMateria() {
-        return idMateria;
-    }
-
-    public void setIdMateria(int idMateria) {
-        this.idMateria = idMateria;
+    public void setIdActividad(int idActividad) {
+        this.idActividad = idActividad;
     }
 }
