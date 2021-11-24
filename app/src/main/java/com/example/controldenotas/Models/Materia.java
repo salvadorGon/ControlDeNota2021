@@ -11,17 +11,15 @@ public class Materia implements Serializable {
     int idMateria;
 
     String nombre;
-    String seccion;
-    int año;
+    String descripcion;
 
-    public Materia() {
-    }
-
-    public Materia(int idMateria, String nombre, String seccion, int año) {
+    public Materia(int idMateria, String nombre, String descripcion) {
         this.idMateria = idMateria;
         this.nombre = nombre;
-        this.seccion = seccion;
-        this.año = año;
+        this.descripcion = descripcion;
+    }
+
+    public Materia() {
     }
 
     public int getIdMateria() {
@@ -40,19 +38,11 @@ public class Materia implements Serializable {
         this.nombre = nombre;
     }
 
-    public String getSeccion() {
-        return seccion;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setSeccion(String seccion) {
-        this.seccion = seccion;
-    }
-
-    public int getAño() {
-        return año;
-    }
-
-    public void setAño(int año) {
-        this.año = año;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 }

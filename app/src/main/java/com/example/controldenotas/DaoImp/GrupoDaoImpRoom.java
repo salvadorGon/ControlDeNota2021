@@ -4,44 +4,44 @@ import android.content.Context;
 
 import androidx.room.Room;
 
-import com.example.controldenotas.Dao.ActividadMateriaDao;
+import com.example.controldenotas.Dao.GrupoDao;
 import com.example.controldenotas.Data.DataBaseRoom;
-import com.example.controldenotas.Models.ActividadMateria;
+import com.example.controldenotas.Models.Grupo;
 
 import java.util.List;
 
-public class ActividadMateriaDaoImpRoom implements ActividadMateriaDao {
+public class GrupoDaoImpRoom implements GrupoDao {
 
     DataBaseRoom db;
-    ActividadMateriaDao dao;
+    GrupoDao dao;
 
-    public ActividadMateriaDaoImpRoom(Context context){
+    public GrupoDaoImpRoom(Context context){
         db = Room.databaseBuilder(context, DataBaseRoom.class, "db").allowMainThreadQueries().build();
-        dao = db.actividadMateriaDao();
+        dao = db.grupoDao();
     }
 
     @Override
-    public List<ActividadMateria> getAll() {
+    public List<Grupo> getAll() {
         return dao.getAll();
     }
 
     @Override
-    public ActividadMateria get(int id) {
+    public Grupo get(int id) {
         return dao.get(id);
     }
 
     @Override
-    public void save(ActividadMateria entity) {
+    public void save(Grupo entity) {
         dao.save(entity);
     }
 
     @Override
-    public void delete(ActividadMateria entity) {
+    public void delete(Grupo entity) {
         dao.delete(entity);
     }
 
     @Override
-    public void update(ActividadMateria entity) {
+    public void update(Grupo entity) {
         dao.update(entity);
     }
 }
