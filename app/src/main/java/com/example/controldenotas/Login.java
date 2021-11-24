@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.controldenotas.DataView.RegistroUsuario;
+
 public class Login extends AppCompatActivity {
 
     Button btnRegistrar;
@@ -28,8 +30,8 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        Intent intent1 = new Intent(this, ListaActividades.class);
-
+        //Intent intent1 = new Intent(this, ListaActividades.class);
+        Intent intent1 = new Intent(this, RegistroUsuario.class);
         btnAgregarActividades.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
