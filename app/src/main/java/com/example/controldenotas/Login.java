@@ -7,38 +7,37 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.controldenotas.DataView.RegistroUsuario;
+
 public class Login extends AppCompatActivity {
 
-    Button btnRegistrar;
-    Button btnAgregarActividades;
+    Button btnIngreso;
+    Button btnRegistrarUsuario;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        this.btnRegistrar = (Button) findViewById(R.id.btnIngresar);
-        this.btnAgregarActividades = (Button)  findViewById(R.id.btnRegistrarse);
+        this.btnIngreso = (Button) findViewById(R.id.btnIngresar);
+        this.btnRegistrarUsuario = (Button)  findViewById(R.id.btnRegistrarse);
 
         Intent intent = new Intent(this, Principal.class);
 
-        btnRegistrar.setOnClickListener(new View.OnClickListener() {
+        btnIngreso.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(intent);
             }
         });
 
-        Intent intent1 = new Intent(this, ListaActividades.class);
+        Intent intent1 = new Intent(this, RegistroUsuario.class);
 
-        btnAgregarActividades.setOnClickListener(new View.OnClickListener() {
+        btnRegistrarUsuario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(intent1);
             }
         });
-
-
-
-
     }
 }

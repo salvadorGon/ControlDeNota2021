@@ -9,4 +9,6 @@
     <color name="white">#FFFFFFFF</color>
     <color name="verdeaqua">#02989D </color>
     <color name="azulbandera">#154360 </color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
 </resources>

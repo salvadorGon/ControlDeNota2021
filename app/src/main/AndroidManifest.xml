@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlDeNotas">
         <activity
+            android:name=".Perfil"
+            android:exported="false" />
+        <activity
             android:name=".DataView.RegistroUsuario"
             android:exported="false" />
         <activity

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#1F7FBC"
+    android:background="@drawable/gradient"
     tools:context=".Principal">
 
     <ImageView
@@ -56,8 +56,8 @@
         app:layout_constraintVertical_bias="0.063">
 
         <TableLayout
-            android:layout_width="343dp"
-            android:layout_height="651dp"
+            android:layout_width="347dp"
+            android:layout_height="544dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
@@ -109,7 +109,8 @@
                         android:fontFamily="sans-serif"
                         android:text="Perfil"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -147,14 +148,15 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <Button
-                        android:id="@+id/btnEscuela"
+                        android:id="@+id/btnInstituto"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:background="#00FFFFFF"
                         android:fontFamily="sans-serif"
-                        android:text="Escuela"
+                        android:text="Institu"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -199,7 +201,8 @@
                         android:fontFamily="sans-serif"
                         android:text="Materia"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </TableRow>
@@ -249,9 +252,10 @@
                         android:layout_height="35dp"
                         android:background="#00FFFFFF"
                         android:fontFamily="sans-serif"
-                        android:text="Profe"
+                        android:text="Profesor"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -297,7 +301,8 @@
                         android:text="Actividad"
                         android:textAlignment="center"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -342,7 +347,8 @@
                         android:fontFamily="sans-serif"
                         android:text="Alumno"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </TableRow>
@@ -387,14 +393,15 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <Button
-                        android:id="@+id/btnCalificar1"
+                        android:id="@+id/btnCalificarr"
                         android:layout_width="match_parent"
                         android:layout_height="35dp"
                         android:background="#00FFFFFF"
                         android:fontFamily="sans-serif"
                         android:text="Calificar"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -439,7 +446,8 @@
                         android:fontFamily="sans-serif"
                         android:text="Confi"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -484,7 +492,8 @@
                         android:fontFamily="sans-serif"
                         android:text="Cerrar"
                         android:textColor="#000000"
-                        android:textSize="11dp" />
+                        android:textSize="9dp"
+                        android:textStyle="bold" />
                 </LinearLayout>
 
             </TableRow>
