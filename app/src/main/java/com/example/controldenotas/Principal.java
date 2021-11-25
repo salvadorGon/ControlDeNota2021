@@ -9,13 +9,11 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.controldenotas.DataView.RegistroUsuario;
+import com.example.controldenotas.Models.Alumno;
 
 public class Principal extends AppCompatActivity {
 
-    Button btnAlumnoPerfil;
-    Button btnActividad;
-    Button btnCali;
-    Button btnCerrarSesion;
+    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +21,19 @@ public class Principal extends AppCompatActivity {
         setContentView(R.layout.activity_principal);
 
         this.btnAlumnoPerfil = (Button) findViewById(R.id.btnPerfil);
+        this.btnActividad = (Button) findViewById(R.id.btnActividad);
+        this.btnCali = (Button) findViewById(R.id.btnCalificarr);
+        this.btnCerrarSesion = (Button) findViewById(R.id.btnCerrar);
+        this.btnConfiguracion = (Button) findViewById(R.id.btnConfiguracion);
 
         Intent intent = new Intent(this, Perfil.class);
+        Intent intentAct = new Intent(this, ListaActividades.class);
+        Intent intentCal = new Intent(this, Buscando.class);
+        Intent intentCerrar = new Intent(this, Login.class);
+        Intent intentAgregarDatos = new Intent(this, AgregarActividades.class);
 
+        //eventos click de los botones
+        //VER EL PERFIL DEL ALUMNO
         btnAlumnoPerfil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -33,10 +41,7 @@ public class Principal extends AppCompatActivity {
             }
         });
 
-        this.btnActividad = (Button) findViewById(R.id.btnActividad);
-
-        Intent intentAct = new Intent(this, AgregarActividades.class);
-
+        //PARA GESTIONAR ACTIVIDADES
         btnActividad.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,21 +49,18 @@ public class Principal extends AppCompatActivity {
             }
         });
 
-        this.btnCali = (Button) findViewById(R.id.btnCalificarr);
 
-        Intent intentCal = new Intent(this, Calificando.class);
-
+        //BTN CALIFICAR
         btnCali.setOnClickListener(new View.OnClickListener() {
             @Override
+            //busca un alumno o lista de alumnos para calificar
             public void onClick(View v) {
                 startActivity(intentCal);
             }
         });
 
-        this.btnCerrarSesion = (Button) findViewById(R.id.btnCerrar);
 
-        Intent intentCerrar = new Intent(this, Login.class);
-
+        //BTN CIERRA SESION
         btnCerrarSesion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -66,5 +68,16 @@ public class Principal extends AppCompatActivity {
             }
         });
 
+        //btn solo agrega datos a las tablas
+        btnConfiguracion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //aqui se va agregar datos a las tablas
+                startActivity(intentAgregarDatos);
+                //fin de agregar datos a las tablas
+            }
+        });
+
     }
+
 }

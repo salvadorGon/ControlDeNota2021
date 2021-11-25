@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="ALUMNO"
+        android:text="ALUMNOS CALIFICAR"
         android:textAlignment="center"
         android:textSize="32dp"
         android:textStyle="bold"
@@ -38,11 +38,11 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ddGrado"
+        android:id="@+id/ddMateria"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="Seleccionar Grado"
+        android:hint="Seleccionar Materia"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         tools:layout_editor_absoluteX="16dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -50,45 +50,45 @@
         app:layout_constraintTop_toBottomOf="@+id/ddInstitucion">
 
         <AutoCompleteTextView
-            android:id="@+id/acGrado"
+            android:id="@+id/acMateria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ddSeccion"
+        android:id="@+id/ddGrupo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="Seleccionar Seccion"
+        android:hint="Seleccionar Grupo"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         tools:layout_editor_absoluteX="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ddGrado">
+        app:layout_constraintTop_toBottomOf="@+id/ddMateria">
 
         <AutoCompleteTextView
-            android:id="@+id/acSeccion"
+            android:id="@+id/acGrupo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"/>
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/ddAlumno"
+        android:id="@+id/ddActividad"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:hint="Seleccionar Alumno"
+        android:hint="Seleccionar Actvidad"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         tools:layout_editor_absoluteX="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ddSeccion">
+        app:layout_constraintTop_toBottomOf="@+id/ddGrupo">
 
         <AutoCompleteTextView
-            android:id="@+id/acAlumno"
+            android:id="@+id/acActvidad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none"/>
@@ -112,7 +112,7 @@
             android:textColor="@android:color/white" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnMostrarCALIFICAR"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
