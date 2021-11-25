@@ -90,7 +90,7 @@
         tools:layout_editor_absoluteX="16dp">
 
         <AutoCompleteTextView
-            android:id="@+id/acActvidad"
+            android:id="@+id/acActividad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="none" />
