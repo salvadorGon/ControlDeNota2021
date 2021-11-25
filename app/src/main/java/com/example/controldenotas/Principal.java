@@ -16,6 +16,12 @@ public class Principal extends AppCompatActivity {
     Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion;
 
     @Override
+    public void onBackPressed() {
+
+        //super.onBackPressed();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
@@ -77,6 +83,8 @@ public class Principal extends AppCompatActivity {
                 //fin de agregar datos a las tablas
             }
         });
+
+
 
     }
 

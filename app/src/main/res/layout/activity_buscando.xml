@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradientlogin"
     tools:context=".Buscando">
 
     <TextView
@@ -13,7 +14,8 @@
         android:layout_marginTop="24dp"
         android:text="ALUMNOS CALIFICAR"
         android:textAlignment="center"
-        android:textSize="32dp"
+        android:textColor="#FFFFFF"
+        android:textSize="30dp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,59 +41,59 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ddMateria"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Seleccionar Materia"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        tools:layout_editor_absoluteX="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ddInstitucion">
+        app:layout_constraintTop_toBottomOf="@+id/ddInstitucion"
+        tools:layout_editor_absoluteX="16dp">
 
         <AutoCompleteTextView
             android:id="@+id/acMateria"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"/>
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ddGrupo"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Seleccionar Grupo"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        tools:layout_editor_absoluteX="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ddMateria">
+        app:layout_constraintTop_toBottomOf="@+id/ddMateria"
+        tools:layout_editor_absoluteX="16dp">
 
         <AutoCompleteTextView
             android:id="@+id/acGrupo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"/>
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/ddActividad"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:hint="Seleccionar Actvidad"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
-        tools:layout_editor_absoluteX="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ddGrupo">
+        app:layout_constraintTop_toBottomOf="@+id/ddGrupo"
+        tools:layout_editor_absoluteX="16dp">
 
         <AutoCompleteTextView
             android:id="@+id/acActvidad"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="none"/>
+            android:inputType="none" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <LinearLayout
@@ -107,7 +109,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@android:color/holo_red_dark"
+            android:backgroundTint="@color/azulbandera"
             android:text="Limpiar"
             android:textColor="@android:color/white" />
 

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/gradientlogin"
     tools:context=".Calificando">
 
     <TextView
@@ -193,7 +193,7 @@
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/azulbandera"
             android:text="Cancelar"
             android:textColor="@android:color/white" />
 
@@ -202,7 +202,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:backgroundTint="@color/teal_200"
+            android:backgroundTint="@color/azulbandera"
             android:text="Guardar"
             android:textColor="@android:color/white" />
     </LinearLayout>

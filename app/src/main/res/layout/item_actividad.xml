@@ -42,7 +42,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="0"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/azulbandera"
                 android:text="Calificar"
                 app:cornerRadius="?attr/actionBarSize" />
 
@@ -51,7 +51,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:backgroundTint="@color/teal_200"
+                android:backgroundTint="@color/azulbandera"
                 android:text="Eliminar"
                 app:cornerRadius="?attr/actionBarSize" />
 
