@@ -26,6 +26,11 @@ public class GrupoDaoImpRoom implements GrupoDao {
     }
 
     @Override
+    public List<String> getNombreGrupo() {
+        return dao.getNombreGrupo();
+    }
+
+    @Override
     public Grupo get(int id) {
         return dao.get(id);
     }

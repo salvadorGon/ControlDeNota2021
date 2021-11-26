@@ -16,6 +16,9 @@ public interface GrupoDao {
     @Query("SELECT * FROM Grupo")
     public List<Grupo> getAll();
 
+    @Query("SELECT nombre FROM Grupo")
+    public List<String> getNombreGrupo();
+
     @Query("SELECT * FROM Grupo WHERE idGrupo = :id")
     public Grupo get(int id);
 

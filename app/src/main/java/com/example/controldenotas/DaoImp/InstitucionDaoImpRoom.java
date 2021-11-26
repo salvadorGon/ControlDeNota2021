@@ -26,6 +26,11 @@ public class InstitucionDaoImpRoom implements InstitucionDao {
     }
 
     @Override
+    public List<String> getNombreInstitucion() {
+        return dao.getNombreInstitucion();
+    }
+
+    @Override
     public Institucion get(int id) {
         return dao.get(id);
     }

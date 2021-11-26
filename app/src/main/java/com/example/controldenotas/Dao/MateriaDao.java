@@ -16,6 +16,9 @@ public interface MateriaDao {
     @Query("SELECT * FROM Materia")
     public List<Materia> getAll();
 
+    @Query("SELECT nombre FROM Materia")
+    public List<String> getNombreMateria();
+
     @Query("SELECT * FROM Materia WHERE idMateria = :id")
     public Materia get(int id);
 

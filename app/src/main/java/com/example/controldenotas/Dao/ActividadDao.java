@@ -16,6 +16,9 @@ public interface ActividadDao {
     @Query("SELECT * FROM Actividad")
     public List<Actividad> getAll();
 
+    @Query("SELECT nombre FROM Actividad")
+    public List<String> getNombreActividad();
+
     @Query("SELECT * FROM Actividad WHERE idActividad = :id")
     public Actividad get(int id);
 

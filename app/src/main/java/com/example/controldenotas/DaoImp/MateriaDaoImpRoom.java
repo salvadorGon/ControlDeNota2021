@@ -26,6 +26,11 @@ public class MateriaDaoImpRoom implements MateriaDao {
     }
 
     @Override
+    public List<String> getNombreMateria() {
+        return dao.getNombreMateria();
+    }
+
+    @Override
     public Materia get(int id) {
         return dao.get(id);
     }

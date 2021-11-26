@@ -25,6 +25,11 @@ public class ActividadDaoImpRoom implements ActividadDao {
     }
 
     @Override
+    public List<String> getNombreActividad() {
+        return dao.getNombreActividad();
+    }
+
+    @Override
     public Actividad get(int id) {
         return dao.get(id);
     }
