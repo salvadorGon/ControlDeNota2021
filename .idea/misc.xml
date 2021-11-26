@@ -36,7 +36,22 @@
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/item_calificandoalumno.xml" value="0.33" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/layout/toolbar.xml" value="0.1" />
         <entry key="..\:/Users/josue/Documents/ControlDeNotas/app/src/main/res/menu/main_menu.xml" value="0.25" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_agregar_actividades.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_buscando.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_calificando.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_calificandoalumno.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_item_notas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_lista_materias.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_lista_notas.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_listaactividades.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_login.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_perfil.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_principal.xml" value="0.5" />
         <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/activity_registro_usuario.xml" value="0.33" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/item_actividad.xml" value="0.33" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/item_calificandoalumno.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/salva/OneDrive/Documentos/Moviles/ControlDeNotas/app/src/main/res/layout/item_materia.xml" value="0.33" />
       </map>
     </option>
   </component>

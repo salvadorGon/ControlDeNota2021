@@ -63,10 +63,10 @@ public class RegistroUsuario extends AppCompatActivity {
     public int GuardarUsuario(){
         Usuario nuevoUsuario = new Usuario();
         Docente nuevoDocente = new Docente();
-        nuevoDocente.setNombre(txtNombre.toString());
-        nuevoDocente.setApellido(txtApellido.toString());
-        nuevoDocente.setTelefono(txtTelefono.toString());
-        nuevoDocente.setDui(txtDui.toString());
+        nuevoDocente.setNombre(txtNombre.getText().toString());
+        nuevoDocente.setApellido(txtApellido.getText().toString());
+        nuevoDocente.setTelefono(txtTelefono.getText().toString());
+        nuevoDocente.setDui(txtDui.getText().toString());
 
         daoDocente = new DocenteDaoImpRoom(getApplicationContext());
         daoDocente.save(nuevoDocente);
@@ -74,8 +74,8 @@ public class RegistroUsuario extends AppCompatActivity {
         int id = daoDocente.getMaxIdDocente();
 
 
-        nuevoUsuario.setUsuario(txtDui.toString());
-        nuevoUsuario.setClave(txtClaveUsuario.toString());
+        nuevoUsuario.setUsuario(txtDui.getText().toString());
+        nuevoUsuario.setClave(txtClaveUsuario.getText().toString());
         nuevoUsuario.setIdDocente(id);
 
         

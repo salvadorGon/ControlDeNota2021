@@ -8,12 +8,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.controldenotas.DataView.ListaMaterias;
 import com.example.controldenotas.DataView.RegistroUsuario;
 import com.example.controldenotas.Models.Alumno;
+import com.example.controldenotas.Models.Materia;
 
 public class Principal extends AppCompatActivity {
 
-    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion;
+    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion, btnMateria;
 
     @Override
     public void onBackPressed() {
@@ -31,12 +33,14 @@ public class Principal extends AppCompatActivity {
         this.btnCali = (Button) findViewById(R.id.btnCalificarr);
         this.btnCerrarSesion = (Button) findViewById(R.id.btnCerrar);
         this.btnConfiguracion = (Button) findViewById(R.id.btnConfiguracion);
+        this.btnMateria = (Button) findViewById(R.id.btnMateria);
 
         Intent intent = new Intent(this, Perfil.class);
         Intent intentAct = new Intent(this, ListaActividades.class);
         Intent intentCal = new Intent(this, Buscando.class);
         Intent intentCerrar = new Intent(this, Login.class);
         Intent intentAgregarDatos = new Intent(this, AgregarActividades.class);
+        Intent intentMateria = new Intent(this, ListaMaterias.class);
 
         //eventos click de los botones
         //VER EL PERFIL DEL ALUMNO
@@ -84,6 +88,10 @@ public class Principal extends AppCompatActivity {
             }
         });
 
+        //Ver Materias
+        btnMateria.setOnClickListener(v->{
+            startActivity(intentMateria);
+        });
 
 
     }
