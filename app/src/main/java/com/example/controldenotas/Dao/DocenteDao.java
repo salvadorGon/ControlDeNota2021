@@ -26,4 +26,7 @@ public interface DocenteDao {
 
     @Update
     public void update(Docente entity);
+
+    @Query("SELECT max(idDocente) AS 'getMaxId' FROM Docente;")
+    public int getMaxIdDocente();
 }

@@ -44,4 +44,9 @@ public class DocenteDaoImpRoom implements DocenteDao {
     public void update(Docente entity) {
         dao.update(entity);
     }
+
+    @Override
+    public int getMaxIdDocente() {
+        return dao.getMaxIdDocente();
+    }
 }
