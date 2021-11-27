@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlDeNotas">
         <activity
+            android:name=".DataView.ListaGrupos"
+            android:exported="true" />
+        <activity
             android:name=".DataView.ListaMaterias"
             android:exported="true" />
         <activity

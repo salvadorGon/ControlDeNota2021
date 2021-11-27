@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:layout_editor_absoluteX="9dp">
+
     <LinearLayout
-        android:id="@+id/lyMateria"
+        android:id="@+id/lyGrupo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal">
         <TextView
-            android:id="@+id/txvIdMateria"
+            android:id="@+id/txvIdGrupo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="15dp"
@@ -21,15 +22,15 @@
             android:textSize="20dp" />
 
         <TextView
-            android:id="@+id/txvMostrarNombreMateria"
+            android:id="@+id/txvMostrarNombreGrupo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Nombre Materia"
+            android:text="Nombre Grupo"
             android:textSize="12dp" />
 
         <Button
-            android:id="@+id/btnModificar"
+            android:id="@+id/btnModificarGrupo"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
@@ -37,7 +38,7 @@
             android:drawableLeft="@drawable/ic_baseline_edit_24"
             app:cornerRadius="?attr/actionBarSize" />
         <Button
-            android:id="@+id/btnVerGrupo"
+            android:id="@+id/btnVerNotas"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_marginLeft="10dp"
@@ -47,7 +48,7 @@
         ic_baseline_visibility_24
 
         <Button
-            android:id="@+id/btnEliminarMateria"
+            android:id="@+id/btnEliminarGrupo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0"
@@ -56,11 +57,11 @@
             app:cornerRadius="?attr/actionBarSize" />
     </LinearLayout>
     <TextView
-        android:id="@+id/txvDescripcion"
+        android:id="@+id/txvanio"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Descripcion"
+        android:text="año"
         android:textSize="12dp" />
 
 </LinearLayout>
