@@ -1,7 +1,6 @@
 package com.example.controldenotas;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +9,14 @@ import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 
-import com.example.controldenotas.Adaptador.ActividadAdapter;
-import com.example.controldenotas.Adaptador.AlumnoAdapter;
 import com.example.controldenotas.Dao.ActividadDao;
+import com.example.controldenotas.Dao.GrupoDao;
+import com.example.controldenotas.Dao.InstitucionDao;
+import com.example.controldenotas.Dao.MateriaDao;
 import com.example.controldenotas.DaoImp.ActividadDaoImpRoom;
+import com.example.controldenotas.DaoImp.GrupoDaoImpRoom;
+import com.example.controldenotas.DaoImp.InstitucionDaoImpRoom;
+import com.example.controldenotas.DaoImp.MateriaDaoImpRoom;
 import com.example.controldenotas.Models.Actividad;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -26,6 +29,10 @@ public class Buscando extends AppCompatActivity {
     AutoCompleteTextView acInstitucion, acMateria, acGrupo,acActividad;
     private String[] universidades = { "USO", "UNAB", "UES", "UFG"};
     List<Actividad> actividadeslist;
+
+    InstitucionDao daoInstitucion;
+    MateriaDao daoMateria;
+    GrupoDao daoGrupo;
     ActividadDao daoActividad;
 
     @Override
@@ -33,9 +40,13 @@ public class Buscando extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buscando);
 
+        daoInstitucion = new InstitucionDaoImpRoom(getApplicationContext());
+        daoMateria = new MateriaDaoImpRoom(getApplicationContext());
+        daoGrupo = new GrupoDaoImpRoom(getApplicationContext());
         daoActividad=new ActividadDaoImpRoom(getApplicationContext());
 
-        //CARGAR DATOS A LOS
+
+        //CARGAR DATOS A LOS AUTO COMPLETE TEXT
 
         //mostrando ventana de alumnos que cumplan con los filtros
         this.btnMostrarAlumnosCalificar = (Button) findViewById(R.id.btnMostrarCALIFICAR);
@@ -44,21 +55,21 @@ public class Buscando extends AppCompatActivity {
         this.acGrupo = (AutoCompleteTextView) findViewById(R.id.acGrupo);
         this.acActividad = (AutoCompleteTextView) findViewById(R.id.acActividad);
 
+
         Intent intentMostrando = new Intent(this, CalificandoAlumno.class);
         this.cargarDatos();
 
         //adaptador de tipo string
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, universidades);
+        ArrayAdapter<String> adapterInstitucion = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, daoInstitucion.getNombreInstitucion());
+        ArrayAdapter<String> adapterMateria = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, daoMateria.getNombreMateria());
+        ArrayAdapter<String> adapterGrupo = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, daoGrupo.getNombreGrupo());
+        ArrayAdapter<String> adapterActividad = new ArrayAdapter<String>(this, android.R.layout.simple_dropdown_item_1line, daoActividad.getNombreActividad());
 
-        //instancia del adaptador de tipo objeto
-        ActividadAdapter adapterActividades=new ActividadAdapter(this.actividadeslist, getApplicationContext(), daoActividad);
 
-        acInstitucion.setAdapter(adapter);
-        acMateria.setAdapter(adapter);
-        acGrupo.setAdapter(adapter);
-        acActividad.setAdapter(adapter);
-        //acActividad.setAdapter(adapterActividades);
-
+        acInstitucion.setAdapter(adapterInstitucion);
+        acMateria.setAdapter(adapterMateria);
+        acGrupo.setAdapter(adapterGrupo);
+        acActividad.setAdapter(adapterActividad);
         //fin carga de datos
 
         //evento
@@ -68,9 +79,6 @@ public class Buscando extends AppCompatActivity {
                 startActivity(intentMostrando);
             }
         });
-
-
-
 
     }
     void  cargarDatos(){
