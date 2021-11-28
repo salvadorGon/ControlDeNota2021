@@ -11,15 +11,17 @@ public class Nota implements Serializable {
     int idNota;
 
     double nota;
-    int idActividad;
+    public int idAlumno;
+    public int idActividadMateriaGrupo;
 
     public Nota() {
     }
 
-    public Nota(int idNota, double nota, int idActividad) {
+    public Nota(int idNota, double nota, int idAlumno, int idActividadMateriaGrupo) {
         this.idNota = idNota;
         this.nota = nota;
-        this.idActividad = idActividad;
+        this.idAlumno = idAlumno;
+        this.idActividadMateriaGrupo = idActividadMateriaGrupo;
     }
 
     public int getIdNota() {
@@ -38,11 +40,19 @@ public class Nota implements Serializable {
         this.nota = nota;
     }
 
-    public int getIdActividad() {
-        return idActividad;
+    public int getIdAlumno() {
+        return idAlumno;
     }
 
-    public void setIdActividad(int idActividad) {
-        this.idActividad = idActividad;
+    public void setIdAlumno(int idAlumno) {
+        this.idAlumno = idAlumno;
+    }
+
+    public int getIdActividadMateriaGrupo() {
+        return idActividadMateriaGrupo;
+    }
+
+    public void setIdActividadMateriaGrupo(int idActividadMateriaGrupo) {
+        this.idActividadMateriaGrupo = idActividadMateriaGrupo;
     }
 }

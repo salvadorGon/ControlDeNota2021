@@ -4,6 +4,7 @@ import androidx.room.Database;
 import androidx.room.RoomDatabase;
 
 import com.example.controldenotas.Dao.ActividadDao;
+import com.example.controldenotas.Dao.ActividadMateriaGrupoDao;
 import com.example.controldenotas.Dao.AlumnoDao;
 import com.example.controldenotas.Dao.AlumnoGrupoDao;
 import com.example.controldenotas.Dao.AlumnoMateriaDao;
@@ -16,6 +17,7 @@ import com.example.controldenotas.Dao.MateriaDao;
 import com.example.controldenotas.Dao.NotaDao;
 import com.example.controldenotas.Dao.UsuarioDao;
 import com.example.controldenotas.Models.Actividad;
+import com.example.controldenotas.Models.ActividadMateriaGrupo;
 import com.example.controldenotas.Models.Alumno;
 import com.example.controldenotas.Models.AlumnoGrupo;
 import com.example.controldenotas.Models.AlumnoMateria;
@@ -32,7 +34,7 @@ import com.example.controldenotas.Models.Usuario;
 @Database(entities = {Actividad.class, Alumno.class,
         AlumnoMateria.class, AlumnoNotaMateria.class, Docente.class, Institucion.class,
         InstitucionMateria.class, Materia.class, Nota.class, Grupo.class, AlumnoGrupo.class,
-        Usuario.class}, version = 1)
+        Usuario.class, ActividadMateriaGrupo.class}, version = 1)
 public abstract class DataBaseRoom extends RoomDatabase {
 
     public abstract ActividadDao actividadDao();
@@ -47,4 +49,5 @@ public abstract class DataBaseRoom extends RoomDatabase {
     public abstract GrupoDao grupoDao();
     public abstract AlumnoGrupoDao alumnoGrupoDao();
     public abstract UsuarioDao usuarioDao();
+    public abstract ActividadMateriaGrupoDao actividadMateriaGrupoDao();
 }

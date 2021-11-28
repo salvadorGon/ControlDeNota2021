@@ -8,18 +8,21 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.controldenotas.Dao.ActividadDao;
+import com.example.controldenotas.Dao.ActividadMateriaGrupoDao;
 import com.example.controldenotas.Dao.DocenteDao;
 import com.example.controldenotas.Dao.GrupoDao;
 import com.example.controldenotas.Dao.InstitucionDao;
 import com.example.controldenotas.Dao.MateriaDao;
 import com.example.controldenotas.DaoImp.ActividadDaoImpRoom;
 import com.example.controldenotas.Dao.AlumnoDao;
+import com.example.controldenotas.DaoImp.ActividadMateriaGrupoDaoImpRoom;
 import com.example.controldenotas.DaoImp.AlumnoDaoImpRoom;
 import com.example.controldenotas.DaoImp.DocenteDaoImpRoom;
 import com.example.controldenotas.DaoImp.GrupoDaoImpRoom;
 import com.example.controldenotas.DaoImp.InstitucionDaoImpRoom;
 import com.example.controldenotas.DaoImp.MateriaDaoImpRoom;
 import com.example.controldenotas.Models.Actividad;
+import com.example.controldenotas.Models.ActividadMateriaGrupo;
 import com.example.controldenotas.Models.Alumno;
 import com.example.controldenotas.Models.Docente;
 import com.example.controldenotas.Models.Grupo;
@@ -46,6 +49,9 @@ public class AgregarActividades extends AppCompatActivity {
 
     Materia materia;
     MateriaDao daomateria;
+
+    ActividadMateriaGrupo amg;
+    ActividadMateriaGrupoDao amgdao;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,6 +64,7 @@ public class AgregarActividades extends AppCompatActivity {
         daogrupo = new GrupoDaoImpRoom(getApplicationContext());
         daoinstitucion = new InstitucionDaoImpRoom(getApplicationContext());
         daomateria = new MateriaDaoImpRoom(getApplicationContext());
+        amgdao = new ActividadMateriaGrupoDaoImpRoom(getApplicationContext());
 
         //vinculando los botones
         this.btnContinuar=(Button) findViewById(R.id.btnContinuar);
@@ -69,6 +76,7 @@ public class AgregarActividades extends AppCompatActivity {
         guardarDocente();
         guardarGrupo();
         guardarInstitucion();
+        guardarActividadMateriagrupo();
 
         Intent intent =new Intent(this,Principal.class);
 
@@ -132,6 +140,14 @@ public class AgregarActividades extends AppCompatActivity {
         materia.setNombre("Matematica");
         materia.setDescripcion("Es una materia");
         daomateria.save(materia);
+    }
+
+    void guardarActividadMateriagrupo(){
+        amg = new ActividadMateriaGrupo();
+        amg.setIdActividad(1);
+        amg.setIdMateria(1);
+        amg.setIdGrupo(1);
+        amgdao.save(amg);
     }
 
 }
