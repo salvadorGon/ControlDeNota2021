@@ -31,6 +31,11 @@ public class AlumnoDaoImpRoom implements AlumnoDao {
     }
 
     @Override
+    public List<Alumno> get(int id, int id2) {
+        return dao.get(id, id2);
+    }
+
+    @Override
     public void save(Alumno entity) {
         dao.save(entity);
     }

@@ -7,6 +7,7 @@ import androidx.room.Query;
 import androidx.room.Update;
 
 import com.example.controldenotas.Models.Alumno;
+import com.example.controldenotas.Models.Nota;
 
 import java.util.List;
 
@@ -17,6 +18,10 @@ public interface AlumnoDao {
 
     @Query("SELECT * FROM Alumno WHERE idAlumno = :id")
     public Alumno get(int id);
+
+    //cargar una lista de alumnos que cumpla con las condiciones descritas
+    @Query("SELECT a.*, n.* FROM Alumno a, Nota n, ActividadMateriaGrupo amg WHERE a.idAlumno= n.idAlumno AND n.idAlumno = :idAlumnoTablaNota AND n.idActividadMateriaGrupo = :idActividadMG")
+    public List<Alumno> get(int idAlumnoTablaNota, int idActividadMG);
 
     @Insert
     public void save(Alumno entity);
