@@ -25,6 +25,9 @@
             android:name=".Principal"
             android:exported="false" />
         <activity
+            android:name=".ListaInstitucion"
+            android:exported="false" />
+        <activity
             android:name=".Calificando"
             android:exported="false" />
         <activity

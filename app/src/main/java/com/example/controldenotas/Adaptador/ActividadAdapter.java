@@ -70,8 +70,6 @@ public class ActividadAdapter extends RecyclerView.Adapter<ActividadAdapter.View
         holder.txvId.setText(""+actividadmodel.getIdActividad());
         holder.txvMostrarNombre.setText(actividadmodel.getNombre());
 
-
-
         //boton eliminar
         holder.btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override

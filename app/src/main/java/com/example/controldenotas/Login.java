@@ -29,6 +29,11 @@ public class Login extends AppCompatActivity {
     EditText txtClave;
 
     @Override
+    public void onBackPressed() {
+
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
@@ -46,7 +51,11 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(validar()){
+                    Intent intent = new Intent(getApplicationContext(),Principal.class);
                     startActivity(intent);
+                }
+                else{
+                    Toast.makeText(getApplicationContext(),"Usuario o contraseña erronea", Toast.LENGTH_LONG).show();
                 }
             }
         });

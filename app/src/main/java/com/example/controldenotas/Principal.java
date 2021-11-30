@@ -15,12 +15,10 @@ import com.example.controldenotas.Models.Materia;
 
 public class Principal extends AppCompatActivity {
 
-    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion, btnMateria;
+    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion, btnMateria, btnInstitucion;
 
     @Override
     public void onBackPressed() {
-
-        //super.onBackPressed();
     }
 
     @Override
@@ -34,6 +32,7 @@ public class Principal extends AppCompatActivity {
         this.btnCerrarSesion = (Button) findViewById(R.id.btnCerrar);
         this.btnConfiguracion = (Button) findViewById(R.id.btnConfiguracion);
         this.btnMateria = (Button) findViewById(R.id.btnMateria);
+        this.btnInstitucion = (Button) findViewById(R.id.btnInstituto);
 
         Intent intent = new Intent(this, Perfil.class);
         Intent intentAct = new Intent(this, ListaActividades.class);
@@ -41,6 +40,7 @@ public class Principal extends AppCompatActivity {
         Intent intentCerrar = new Intent(this, Login.class);
         Intent intentAgregarDatos = new Intent(this, AgregarActividades.class);
         Intent intentMateria = new Intent(this, ListaMaterias.class);
+        Intent intentInstitucion = new Intent(this, ListaInstitucion.class);
 
         //eventos click de los botones
         //VER EL PERFIL DEL ALUMNO
@@ -93,7 +93,12 @@ public class Principal extends AppCompatActivity {
             startActivity(intentMateria);
         });
 
-
+        //btn Gestionar Institucion
+        btnInstitucion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentInstitucion);
+            }
+        });
     }
-
 }
