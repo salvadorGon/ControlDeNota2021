@@ -72,7 +72,7 @@ public class AlumnoAdapter extends RecyclerView.Adapter<AlumnoAdapter.ViewHolder
         //Nota notamodel = nota.get(position);
         holder.txvId.setText(""+alumnomodel.getIdAlumno());
         holder.txvMostrarNombre.setText(alumnomodel.getPrimerNombre());
-        holder.edittextnota.setText("10");
+        holder.edittextnota.setText("0.1");
     }
     @Override
     public int getItemCount() {
