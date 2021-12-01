@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.controldenotas.Adaptador.AlumnoAdapter;
@@ -36,6 +39,9 @@ public class CalificandoAlumno extends AppCompatActivity {
 
     ActividadMateriaGrupo actividadmateriagrupo;
     ActividadMateriaGrupoDao actividadmateriagrupodao;
+    TextView tvNombreActEvaluada;
+    EditText edittextnota;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,12 +49,29 @@ public class CalificandoAlumno extends AppCompatActivity {
         setContentView(R.layout.activity_calificandoalumno);
         dao=new AlumnoDaoImpRoom(getApplicationContext());
 
+        //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        //RECUPERAR VALORES
+        Bundle bundle = getIntent().getExtras();
+        String variable = bundle.getString("Actividad");
+        int idact = bundle.getInt("idActividad");
+        int idmater = bundle.getInt("idMateria");
+
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
         notadao = new NotaDaoImpRoom(getApplicationContext());
         actividadmateriagrupodao = new ActividadMateriaGrupoDaoImpRoom(getApplicationContext());
 
         this.rvAlumnosInscritos=(RecyclerView) findViewById(R.id.rvAlumnosInscritos);
         this.btnGuardarNotas = (Button) findViewById(R.id.btnGuardarNotas);
+        this.tvNombreActEvaluada = (TextView) findViewById(R.id.tvNombreActEvaluada);
+        this.edittextnota = (EditText) findViewById(R.id.edittextnota);
+
         cargarDatos();
+
+        //asignando valores
+        tvNombreActEvaluada.setText(variable);
+
+        //**********************************************************************
 
         //configurando recyclerview
         //instancia del adaptador
@@ -60,20 +83,40 @@ public class CalificandoAlumno extends AppCompatActivity {
         btnGuardarNotas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                //+++++++++++++++++++++++++++++++++++++++++++++++++
+                //me falta conocer cada nota
+                //++++++++++++++++++++++++++++++++++++++++++++++++++
+                ArrayList<Double> notass = new ArrayList<Double>();
+
+                try {
+                    for (int i = 0; i < alumnos.size(); i++) {
+                        View v = rvAlumnosInscritos.getChildAt(i);
+                        EditText nameEditText = (EditText) v.findViewById(R.id.edittextnota);
+                        String name = nameEditText.getText().toString();
+                        notass.add(Double.parseDouble(name));
+                    }
+                    //notass.add(5.5);
+
+                }catch(Exception e){}
+                //+++++++++++++++++++++++++++++++++++++++++++++++++++++
+                //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+                double nota;
                 //aqui se va  a guardar en tabla notas
                 //debo saber los datos del filtro
                 try {
-
-                    if(guardarNota(10, 1,conseguirIdActividadMateriaGrupo(1, 1, 1))) {
-                        startActivity(intentPrincipal);
-                    }else{
-                        Toast.makeText(getApplicationContext(), "Error: Datos no guardados ", Toast.LENGTH_SHORT).show();
+                    for(int i=1; i<=5; i++){
+                        nota = notass.get(i-1);
+                        guardarNota(nota, i,conseguirIdActividadMateriaGrupo(idact,idmater, 1));
                     }
+                    Toast.makeText(getApplicationContext(), "Exito: Datos Guardados ", Toast.LENGTH_SHORT).show();
+                        startActivity(intentPrincipal);
                 }catch(Exception e){
-                    Toast.makeText(getApplicationContext(), "Error: "+e, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "Error: Datos no guardados ", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+
 
         //config del adaptador
         rvAlumnosInscritos.setAdapter(adapter);

@@ -1,5 +1,7 @@
 package com.example.controldenotas.Dao;
 
+import android.content.Intent;
+
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -18,6 +20,9 @@ public interface NotaDao {
 
     @Query("SELECT * FROM Nota WHERE idNota = :id")
     public Nota get(int id);
+
+    @Query("SELECT idNota FROM Nota WHERE idActividadMateriaGrupo = :id")
+    public int geti(int id);
 
     @Insert
     public void save(Nota entity);

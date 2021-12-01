@@ -31,6 +31,11 @@ public class NotaDaoImpRoom implements NotaDao {
     }
 
     @Override
+    public int geti(int id2) {
+        return dao.geti(id2);
+    }
+
+    @Override
     public void save(Nota entity) {
         dao.save(entity);
     }

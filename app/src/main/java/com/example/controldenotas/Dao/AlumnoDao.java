@@ -21,7 +21,7 @@ public interface AlumnoDao {
 
     //cargar una lista de alumnos que cumpla con las condiciones descritas
     @Query("SELECT a.*, n.* FROM Alumno a, Nota n, ActividadMateriaGrupo amg WHERE a.idAlumno= n.idAlumno AND n.idAlumno = :idAlumnoTablaNota AND n.idActividadMateriaGrupo = :idActividadMG")
-    public List<Alumno> get(int idAlumnoTablaNota, int idActividadMG);
+    public List<Alumno> getListado(int idAlumnoTablaNota, int idActividadMG);
 
     @Insert
     public void save(Alumno entity);
