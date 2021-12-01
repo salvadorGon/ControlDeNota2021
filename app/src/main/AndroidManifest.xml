@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ControlDeNotas">
         <activity
+            android:name=".ListaAlumno"
+            android:exported="false" />
+        <activity
+            android:name=".ListaDocente"
+            android:exported="false" />
+        <activity
             android:name=".DataView.ListaGrupos"
             android:exported="true" />
         <activity

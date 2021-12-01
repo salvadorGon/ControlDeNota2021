@@ -1,7 +1,6 @@
 package com.example.controldenotas;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.view.accessibility.AccessibilityViewCommand;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,13 +8,10 @@ import android.view.View;
 import android.widget.Button;
 
 import com.example.controldenotas.DataView.ListaMaterias;
-import com.example.controldenotas.DataView.RegistroUsuario;
-import com.example.controldenotas.Models.Alumno;
-import com.example.controldenotas.Models.Materia;
 
 public class Principal extends AppCompatActivity {
 
-    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion, btnMateria, btnInstitucion;
+    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion, btnMateria, btnInstitucion, btnDocente;
 
     @Override
     public void onBackPressed() {
@@ -33,6 +29,7 @@ public class Principal extends AppCompatActivity {
         this.btnConfiguracion = (Button) findViewById(R.id.btnConfiguracion);
         this.btnMateria = (Button) findViewById(R.id.btnMateria);
         this.btnInstitucion = (Button) findViewById(R.id.btnInstituto);
+        this.btnDocente = (Button) findViewById(R.id.btnProfesor);
 
         Intent intent = new Intent(this, Perfil.class);
         Intent intentAct = new Intent(this, ListaActividades.class);
@@ -41,6 +38,7 @@ public class Principal extends AppCompatActivity {
         Intent intentAgregarDatos = new Intent(this, AgregarActividades.class);
         Intent intentMateria = new Intent(this, ListaMaterias.class);
         Intent intentInstitucion = new Intent(this, ListaInstitucion.class);
+        Intent intentDocente = new Intent(this, ListaDocente.class);
 
         //eventos click de los botones
         //VER EL PERFIL DEL ALUMNO
@@ -98,6 +96,13 @@ public class Principal extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(intentInstitucion);
+            }
+        });
+
+        btnDocente.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentDocente);
             }
         });
     }
