@@ -31,7 +31,7 @@ public class Principal extends AppCompatActivity {
         this.btnInstitucion = (Button) findViewById(R.id.btnInstituto);
         this.btnDocente = (Button) findViewById(R.id.btnProfesor);
 
-        Intent intent = new Intent(this, Perfil.class);
+        Intent intent = new Intent(this, BuscandoMostrar.class);
         Intent intentAct = new Intent(this, ListaActividades.class);
         Intent intentCal = new Intent(this, Buscando.class);
         Intent intentCerrar = new Intent(this, Login.class);

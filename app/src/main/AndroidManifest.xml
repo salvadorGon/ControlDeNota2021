@@ -40,10 +40,16 @@
             android:name=".Buscando"
             android:exported="false" />
         <activity
+            android:name=".BuscandoMostrar"
+            android:exported="false" />
+        <activity
             android:name=".ListaNotas"
             android:exported="false" />
         <activity
             android:name=".CalificandoAlumno"
+            android:exported="true" />
+        <activity
+            android:name=".MostrarNotasAlumno"
             android:exported="true" />
         <activity
             android:name=".AgregarActividades"

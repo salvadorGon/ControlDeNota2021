@@ -10,6 +10,8 @@
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="231dp"
+
+
         android:layout_height="206dp"
         android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -53,7 +55,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:hint="Nombre"
+        android:hint="Gerson Otoniel Gutierrez"
         android:textAlignment="viewStart"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
@@ -69,7 +71,7 @@
         android:layout_height="30dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="20dp"
-        android:hint="Grupo"
+        android:hint="Aplicacion de Notas"
         android:textAlignment="textStart"
         android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
