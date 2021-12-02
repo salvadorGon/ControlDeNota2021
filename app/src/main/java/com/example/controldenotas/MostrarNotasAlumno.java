@@ -40,6 +40,7 @@ public class MostrarNotasAlumno extends AppCompatActivity {
     ActividadMateriaGrupoDao actividadmateriagrupodao;
     TextView tvNombreActEvaluada;
    TextView edittextnota, tvNombreMateria;
+   int idact, idmater;
 
 
     @Override
@@ -53,8 +54,8 @@ public class MostrarNotasAlumno extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String variable = bundle.getString("Actividad");
         String variablemateria = bundle.getString("Materia");
-        int idact = bundle.getInt("idActividad");
-        int idmater = bundle.getInt("idMateria");
+        idact = bundle.getInt("idActividad");
+        idmater = bundle.getInt("idMateria");
 
         //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -76,7 +77,7 @@ public class MostrarNotasAlumno extends AppCompatActivity {
 
         //configurando recyclerview
         //instancia del adaptador
-        AlumnoNotasAdapter adapter=new AlumnoNotasAdapter(this.alumnos, getApplicationContext(), dao);
+        AlumnoNotasAdapter adapter=new AlumnoNotasAdapter(this.alumnos, this.nota, getApplicationContext(), dao, notadao);
         rvAlumnosInscritos.setLayoutManager(new LinearLayoutManager(this));
         Intent intentPrincipal = new Intent(this, Principal.class);
 
@@ -89,6 +90,8 @@ public class MostrarNotasAlumno extends AppCompatActivity {
     void  cargarDatos(){
         alumnos=new ArrayList<Alumno>();
         alumnos=dao.getAll();
+        nota = new ArrayList<Nota>();
+        nota = notadao.get(conseguirIdActividadMateriaGrupo(idact, idmater, 1));
     }
 
 

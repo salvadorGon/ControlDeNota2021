@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,6 +25,7 @@ public class AlumnoNotasAdapter extends RecyclerView.Adapter<AlumnoNotasAdapter.
 
     AlumnoDao dao;
     NotaDao notadao;
+    int size;
 
 
     //manipulacion de vista(xml)
@@ -45,12 +47,13 @@ public class AlumnoNotasAdapter extends RecyclerView.Adapter<AlumnoNotasAdapter.
     }}
 
     //constructor del adaptador
-    public AlumnoNotasAdapter(List<Alumno> alumno ,Context context, AlumnoDao dao){
+    public AlumnoNotasAdapter(List<Alumno> alumno, List<Nota> nota, Context context, AlumnoDao dao, NotaDao notadao){
         this.context=context;
         this.alumno=alumno;
+        this.nota = nota;
         this.dao=dao;
+        this.notadao = notadao;
     }
-
 
     //configuraciones
     @NonNull
@@ -64,13 +67,16 @@ public class AlumnoNotasAdapter extends RecyclerView.Adapter<AlumnoNotasAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Alumno alumnomodel=alumno.get(position);
-        //Nota notamodel = nota.get(position);
+        Nota notamodel = nota.get(position);
         holder.txvId.setText(""+alumnomodel.getIdAlumno());
         holder.txvMostrarNombre.setText(alumnomodel.getPrimerNombre());
-        holder.edittextnota.setText("8.5");
+        holder.edittextnota.setText(""+notamodel.getNota());
     }
+
     @Override
     public int getItemCount() {
-        return alumno.size();
+
+        return alumno.size() + nota.size();
     }
+
 }

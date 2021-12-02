@@ -18,8 +18,8 @@ public interface NotaDao {
     @Query("SELECT * FROM Nota")
     public List<Nota> getAll();
 
-    @Query("SELECT * FROM Nota WHERE idNota = :id")
-    public Nota get(int id);
+    @Query("SELECT * FROM Nota WHERE idActividadMateriaGrupo = :id")
+    public List<Nota> get(int id);
 
     @Query("SELECT idNota FROM Nota WHERE idActividadMateriaGrupo = :id")
     public int geti(int id);

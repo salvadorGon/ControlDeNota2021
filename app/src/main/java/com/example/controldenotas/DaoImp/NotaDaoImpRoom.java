@@ -26,7 +26,7 @@ public class NotaDaoImpRoom implements NotaDao {
     }
 
     @Override
-    public Nota get(int id) {
+    public List<Nota> get(int id) {
         return dao.get(id);
     }
 
