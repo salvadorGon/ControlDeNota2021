@@ -28,7 +28,7 @@ public class DocenteAdapter extends RecyclerView.Adapter<DocenteAdapter.ViewHold
         TextView txvIdDoce;
         TextView txvMostrasDoce;
 
-        ImageButton btnModificar;
+        //ImageButton btnModificar;
         ImageButton btnEliminar;
 
         Context context;
@@ -38,7 +38,7 @@ public class DocenteAdapter extends RecyclerView.Adapter<DocenteAdapter.ViewHold
             super(v);
             txvIdDoce=(TextView) v.findViewById(R.id.txvIdDocente);
             txvMostrasDoce=(TextView) v.findViewById(R.id.txvNombreDocente);
-            btnModificar=(ImageButton) v.findViewById(R.id.btnModificarDocente);
+            //btnModificar=(ImageButton) v.findViewById(R.id.btnModificarDocente);
             btnEliminar=(ImageButton) v.findViewById(R.id.btnEliminarDocente);
 
             this.context=context;
@@ -67,7 +67,7 @@ public class DocenteAdapter extends RecyclerView.Adapter<DocenteAdapter.ViewHold
         Docente docentemodel = docente.get(position);
         holder.txvIdDoce.setText(""+docentemodel.getIdDocente());
         holder.txvMostrasDoce.setText(docentemodel.getNombre());
-
+/*
         //Boton MODIFICAR
         holder.btnModificar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,7 +78,7 @@ public class DocenteAdapter extends RecyclerView.Adapter<DocenteAdapter.ViewHold
                 v.getContext().startActivity(intent);
             }
         });
-
+*/
         //Boton ELIMINAR
         holder.btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override

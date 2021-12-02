@@ -11,7 +11,7 @@ import com.example.controldenotas.DataView.ListaMaterias;
 
 public class Principal extends AppCompatActivity {
 
-    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion, btnMateria, btnInstitucion, btnDocente;
+    Button btnAlumnoPerfil, btnActividad, btnCali, btnCerrarSesion, btnConfiguracion, btnMateria, btnInstitucion, btnDocente,btnAlumno;
 
     @Override
     public void onBackPressed() {
@@ -30,6 +30,7 @@ public class Principal extends AppCompatActivity {
         this.btnMateria = (Button) findViewById(R.id.btnMateria);
         this.btnInstitucion = (Button) findViewById(R.id.btnInstituto);
         this.btnDocente = (Button) findViewById(R.id.btnProfesor);
+        this.btnAlumno = (Button) findViewById(R.id.btnAlumno);
 
         Intent intent = new Intent(this, BuscandoMostrar.class);
         Intent intentAct = new Intent(this, ListaActividades.class);
@@ -39,6 +40,7 @@ public class Principal extends AppCompatActivity {
         Intent intentMateria = new Intent(this, ListaMaterias.class);
         Intent intentInstitucion = new Intent(this, ListaInstitucion.class);
         Intent intentDocente = new Intent(this, ListaDocente.class);
+        Intent intentAlumno = new Intent(this, ListaAlumno.class);
 
         //eventos click de los botones
         //VER EL PERFIL DEL ALUMNO
@@ -99,10 +101,19 @@ public class Principal extends AppCompatActivity {
             }
         });
 
+        //Btn Gestionar CRUD docente
         btnDocente.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(intentDocente);
+            }
+        });
+
+        //btn Gestionar CRUD Alumno
+        btnAlumno.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intentAlumno);
             }
         });
     }

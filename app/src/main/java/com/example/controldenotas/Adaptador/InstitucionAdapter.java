@@ -33,7 +33,7 @@ public class InstitucionAdapter extends RecyclerView.Adapter<InstitucionAdapter.
         TextView txvIdInst;
         TextView txvMostrarInst;
 
-        ImageButton btnModificar;
+        //ImageButton btnModificar;
         ImageButton btnEliminar;
 
         Context context;
@@ -43,7 +43,7 @@ public class InstitucionAdapter extends RecyclerView.Adapter<InstitucionAdapter.
             super(view);
             txvIdInst=(TextView) view.findViewById(R.id.txvIdInstitucion);
             txvMostrarInst=(TextView) view.findViewById(R.id.txvMostrarNombreInstitucion);
-            btnModificar=(ImageButton) view.findViewById(R.id.btnModificarInstitucion);
+            //btnModificar=(ImageButton) view.findViewById(R.id.btnModificarInstitucion);
             btnEliminar=(ImageButton) view.findViewById(R.id.btnEliminarInstitucion);
 
             this.context=context;
@@ -71,7 +71,7 @@ public class InstitucionAdapter extends RecyclerView.Adapter<InstitucionAdapter.
         Institucion institucionmodel=institucion.get(position);
         holder.txvIdInst.setText(""+institucionmodel.getIdInstitucion());
         holder.txvMostrarInst.setText(institucionmodel.getNombre());
-
+/*
         //boton Modificar
         holder.btnModificar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,6 +83,8 @@ public class InstitucionAdapter extends RecyclerView.Adapter<InstitucionAdapter.
 
             }
         });
+
+ */
         //boton eliminar
         holder.btnEliminar.setOnClickListener(new View.OnClickListener() {
             @Override
