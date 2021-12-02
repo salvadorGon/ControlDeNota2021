@@ -72,8 +72,8 @@ public class AgregarActividades extends AppCompatActivity {
         //ejecutando creacion de datos
         guardarAlumno("Gerson","Otoniel", "Gutierrez", "Giron");
         guardarAlumno("Iliana","Guadalupe", "Rodriguez", "Chica");
-        guardarAlumno("Leyssi","Rosmery", "Suriano", "Suriano");
-        guardarAlumno("Salvador","Antonio", "Hernandez", "Hernandez");
+        guardarAlumno("Leyssi","Rosmery", "Suriano", "  Corado");
+        guardarAlumno("Salvador","Antonio", "Gonzalez", "Sanchez");
         guardarAlumno("Keny","Guadalupe", "Lue", "Cortez");
 
         guardarActividad("1 Examen Parcial", 20);

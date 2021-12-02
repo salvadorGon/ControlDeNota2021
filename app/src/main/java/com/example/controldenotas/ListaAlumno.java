@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 
 import com.example.controldenotas.Adaptador.AlumnoAdapter;
+import com.example.controldenotas.Adaptador.AlumnoVAdapter;
 import com.example.controldenotas.Dao.AlumnoDao;
 import com.example.controldenotas.DaoImp.AlumnoDaoImpRoom;
 import com.example.controldenotas.Models.Alumno;
@@ -34,29 +35,29 @@ public class ListaAlumno extends AppCompatActivity {
         //Instancias a componentes graficos
         this.btnNuevoAlum = (FloatingActionButton) findViewById(R.id.btnNuevoAlumno);
         this.rvAlumno = (RecyclerView) findViewById(R.id.rvAlumno);
-/*
+
         //Eventos
         this.btnNuevoAlum.setOnClickListener(v->{
             Alumno a = new Alumno();
             a.setPrimerNombre("Gerson");
             a.setSegundoNombre("Otoniel");
-            a.setPrimerApellido("Guitierrez");
+            a.setPrimerApellido("Gutierrez");
             a.setSegundoApellido("Giron");
             dao.save(a);
             cargarDatos();
 
-            AlumnoAdapter adapter = new AlumnoAdapter(this.alumno,getApplicationContext(), dao);
+            AlumnoVAdapter adapter = new AlumnoVAdapter(this.alumno,getApplicationContext(), dao);
             rvAlumno.setLayoutManager(new LinearLayoutManager(this));
 
             rvAlumno.setAdapter(adapter);
         });
-*/
+
         //Cargando datos de Docente
         this.cargarDatos();
 
         //Configuracion de Recyclerview
         //Instancia del adaptador
-        AlumnoAdapter adapter = new AlumnoAdapter(this.alumno,getApplicationContext(), dao);
+        AlumnoVAdapter adapter = new AlumnoVAdapter(this.alumno,getApplicationContext(), dao);
         rvAlumno.setLayoutManager(new LinearLayoutManager(this));
 
         //Configuracion del adaptador

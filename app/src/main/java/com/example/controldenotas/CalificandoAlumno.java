@@ -136,7 +136,7 @@ public class CalificandoAlumno extends AppCompatActivity {
             nota.setIdActividadMateriaGrupo(idActMatGrupo);
             notadao.save(nota);
             bandera = true;
-            Toast.makeText(getApplicationContext(), "Guardado correctamente", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "Guardado correctamente", Toast.LENGTH_SHORT).show();
         }else{
             Toast.makeText(getApplicationContext(), "Ha ocurrido un error", Toast.LENGTH_SHORT).show();
         }
